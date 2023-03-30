@@ -27,7 +27,7 @@ const Navigation = () => {
 					{navLinks.map((link, i) => (
 						<li
 							key={link.id}
-							className={`hover:text-[#11ecfc] text-[#f9fafb] text-[22px] font-bold cursor-pointer`}
+							className={`hover:text-[#11ecfc] text-[#f9fafb] text-[22px] font-bold `}
 							onClick={() => {
 								setOn(link.title);
 								console.log(link.title);

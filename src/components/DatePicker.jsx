@@ -3,7 +3,12 @@ import { addDays } from "date-fns";
 // External library
 import { DateRangePicker, DateRange } from "react-date-range";
 
-const DatePicker = () => {
+const DatePicker = (props) => {
+	// send data to parent
+	// const { pullData } = props;
+	// pullData(roundtrip);
+
+	// Hooks
 	const [roundtrip, setRoundtrip] = useState(false);
 	const [state, setState] = useState([
 		{
@@ -26,7 +31,7 @@ const DatePicker = () => {
 		setState([item.selection]);
 	};
 	return (
-		<div className="fixed ">
+		<div className="absolute">
 			<DateRange
 				preventSnapRefocus={true}
 				color="#333333"

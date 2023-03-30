@@ -10,11 +10,12 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div className="relative z-0 bg-main-pattern bg-cover bg-center">
+			<div className="relative z-0 bg-main-pattern bg-cover bg-center bg-fixed">
 				<div>
 					<Navigation />
 				</div>
 				<div>
+					<Main />
 					<Main />
 				</div>
 			</div>
