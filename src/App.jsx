@@ -3,6 +3,10 @@ import { BrowserRouter } from "react-router-dom";
 import Main from "./components/Main";
 import Navigation from "./components/Navigation";
 
+// date picker
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
 const App = () => {
 	return (
 		<BrowserRouter>
