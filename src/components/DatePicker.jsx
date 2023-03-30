@@ -26,11 +26,12 @@ const DatePicker = () => {
 		setState([item.selection]);
 	};
 	return (
-		<div className="">
+		<div className="fixed ">
 			<DateRange
+				preventSnapRefocus={true}
+				color="#333333"
 				showDateDisplay={true}
-				className="shadow flex flex-col flex-wrap "
-				color={"#dddddd"}
+				className="shadow font-bold "
 				onChange={(item) => handleDate(item)}
 				showSelectionPreview={true}
 				moveRangeOnFirstSelection={false}

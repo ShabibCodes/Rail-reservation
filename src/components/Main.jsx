@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { styles } from "./constants/styles";
 import { HiArrowsRightLeft } from "react-icons/hi2";
 import DatePicker from "./DatePicker";
+import { SeatsioSeatingChart } from "@seatsio/seatsio-react";
+import { BsCalendarEventFill } from "react-icons/bs";
 
 const Main = () => {
-	const [showDate, setShowDate] = useState(true);
+	const [showDate, setShowDate] = useState(false);
 
 	const handleDate = () => {
 		console.log(showDate);
@@ -25,8 +27,7 @@ const Main = () => {
 					{/* FROM */}
 					<button
 						className=" text-white 
-                     shadow-[0_4px_9px_-4px_#3b71ca] font-medium border-black xl:w-96
- "
+                     shadow-[0_4px_9px_-4px_#3b71ca] font-medium border-black xl:w-96"
 					>
 						<select
 							className=" px-[70px] py-[7px] rounded-[5px]  bg-[#f0a630] 
@@ -67,12 +68,50 @@ const Main = () => {
 					</button>
 				</div>
 				{/* ROW 2 */}
-				<div className="flex flex-row ">
-					<button onClick={() => handleDate()} className="px-10 bg-black ">
-						XX
+				<div className="flex flex-row gap-10 mt-3 mb-7">
+					<button
+						onClick={() => handleDate()}
+						className={` ${
+							showDate ? "bg-[#ecb32e]" : "calendar-btn "
+						} min-w-[70px] min-h-[100px] bg-[#ecb32e] text-white flex flex-row justify-center items-center rounded`}
+					>
+						<BsCalendarEventFill size={40} color="white" />
+						<div className={`${showDate ? "relative" : "hidden"} `}>
+							<DatePicker />
+						</div>
 					</button>
-					<div className={`${showDate ? "relative" : "hidden"} `}>
-						<DatePicker />
+
+					<div className="flex flex-col gap-5 ">
+						<p className="">
+							<input
+								className="min-w-[200px] text-center h-7 shadow-sm rounded-lg border outline-none"
+								type="number"
+								placeholder="Adults"
+								minLength="1"
+								maxLength={2}
+								pattern="[0-9]{10}"
+							/>
+						</p>
+						<p>
+							<input
+								className="min-w-[200px] text-center h-7 shadow-sm rounded-lg border outline-none"
+								type="number"
+								placeholder="Children"
+								minLength="1"
+								maxLength={2}
+								pattern="[0-9]{10}"
+							/>{" "}
+						</p>
+						<p>
+							<input
+								className="min-w-[200px] text-center h-7 shadow-sm rounded-lg border outline-none"
+								type="number"
+								placeholder="Elderly"
+								minLength="1"
+								maxLength={2}
+								pattern="[0-9]{10}"
+							/>{" "}
+						</p>
 					</div>
 				</div>
 			</div>
