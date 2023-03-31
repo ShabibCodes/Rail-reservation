@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body section {
+	font-family: "Edu VIC WA NT Beginner", cursive;
+	letter-spacing: 2px;
+}
 .calendar-btn:hover {
 	background: #f1c358;
 
@@ -9,4 +13,23 @@
 	color: #f3f5f4;
 	transition: 0.5s;
 	text-decoration: none;
+}
+.calendar-btn:checked {
+	background: #f1c358;
+}
+
+.btnHover:hover {
+	border: 1px solid #f3f5f4;
+	background: #fb8500;
+
+	transition: 1s;
+	text-decoration: none;
+}
+.btnHover:focus {
+	background: #fb8500;
+}
+
+#seats > button:nth-of-type(2n) {
+	margin: 2px;
+	background: blue;
 }

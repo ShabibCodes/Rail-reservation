@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Main from "./components/Main";
 import Navigation from "./components/Navigation";
+import Seats from "./components/Seats";
 
 // date picker
 import "react-date-range/dist/styles.css"; // main style file
@@ -14,9 +15,9 @@ const App = () => {
 				<div>
 					<Navigation />
 				</div>
+				<div></div>
 				<div>
-					<Main />
-					<Main />
+					<Seats />
 				</div>
 			</div>
 		</BrowserRouter>
