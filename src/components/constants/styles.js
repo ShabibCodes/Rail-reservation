@@ -18,7 +18,8 @@ const styles = {
 		"sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 	navBarElement:
 		"bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-pink-500 hover:to-blue-200 border-white-10",
-	inputTheme: "bg-[#f0a630] hover:bg-[#fdae2f] focus:outline-none",
+	inputTheme:
+		"bg-[#f0a630] hover:bg-[#fdae2f] focus:outline-none shadow-[0_4px_9px_-4px_#3b71ca]",
 };
 
 export { styles };

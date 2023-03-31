@@ -52,7 +52,7 @@ const Main = () => {
 
 						<Select
 							placeholder="FROM"
-							className={`${styles.inputTheme} shadow-[0_4px_9px_-4px_#3b71ca] font-medium border-black xl:w-96
+							className={`${styles.inputTheme}  font-medium border-black xl:w-96
                             transition duration-150 ease-in-out px-[40px] py-[7px] rounded-[5px] outline-none `}
 							closeMenuOnSelect={true}
 							components={animatedComponents}
@@ -66,7 +66,7 @@ const Main = () => {
 						</div>
 						<Select
 							placeholder="TO"
-							className={`${styles.inputTheme} shadow-[0_4px_9px_-4px_#3b71ca] font-medium border-black xl:w-96
+							className={`${styles.inputTheme}  font-medium border-black xl:w-96
                             transition duration-150 ease-in-out px-[40px] py-[7px] rounded-[5px] outline-none `}
 							closeMenuOnSelect={true}
 							components={animatedComponents}
@@ -80,9 +80,10 @@ const Main = () => {
 						<div className="flex flex-row  justify-between gap-12 mt-7 mb-7">
 							<button
 								onClick={() => handleDate()}
-								className={` ${
-									showDate ? "bg-[#ecb32e]" : "calendar-btn "
-								} min-w-[70px] min-h-[100px] bg-[#ecb32e] text-white flex flex-row justify-center items-center rounded`}
+								className={` ${showDate ? "bg-[#ecb32e]" : "calendar-btn "} ${
+									styles.inputTheme
+								}  font-medium border-black xl:w-96
+                                transition duration-150 ease-in-out px-[40px] py-[7px] outline-none min-w-[70px] min-h-[100px] bg-[#ecb32e] text-white flex flex-row justify-center items-center rounded`}
 							>
 								<BsCalendarEventFill size={40} color="white" />
 							</button>
@@ -143,13 +144,15 @@ const Main = () => {
 							</div>
 						</div>
 
-						<Link
-							to={"/seats"}
-							className={`${styles.navBarElement} hover:bg-red-700  text-[22px] font-bold text-white predict-button flex justify-center items-center
+						<button type="submit">
+							<Link
+								to={"/seats"}
+								className={`${styles.navBarElement} hover:bg-red-700  text-[22px] font-bold text-white predict-button flex justify-center items-center
                              rounded-lg  h-12 min-w-[240px]`}
-						>
-							Next step
-						</Link>
+							>
+								Next step
+							</Link>
+						</button>
 					</form>
 				</div>
 			</section>

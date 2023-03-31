@@ -49,19 +49,28 @@ const Seats = () => {
 							className="seats flex flex-row flex-wrap w-[25em] justify-center items-center
                      gap-5 border-5 rounded-lg shadow-md py-5 px-2 mx-8 bg-gray-200 "
 						>
+							{/* seats with status false means it's taking
+                                it should have a differnt color
+                            */}
+
+							{/* 👇️ iterate over an object KEYS */}
 							{seats.map((seat, index) => (
 								<button
 									key={index}
-									value={seat}
+									value={seat.id}
 									onClick={handleSeats}
 									type="radio"
-									className="btnHover w-13 h-15 p-4 rounded-lg
-                                 shadow bg-gradient-to-r from-yellow-500 to-amber-500"
+									className={`${
+										seat.status
+											? "btnHover bg-gradient-to-r from-yellow-500 to-amber-500 "
+											: "bg-slate-300 "
+									}  w-13 h-15 p-4 rounded-lg
+                                 shadow `}
 								>
 									<p>
 										<MdEventSeat size={30} />
 									</p>
-									{seat}
+									{seat.id}
 								</button>
 							))}
 						</p>
