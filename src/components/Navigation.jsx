@@ -27,13 +27,13 @@ const Navigation = () => {
 					{navLinks.map((link, i) => (
 						<li
 							key={link.id}
-							className={`hover:text-[#11ecfc] text-[#f9fafb] text-[22px] font-bold `}
+							className={`hover:text-[#c6c6c6] text-[#888888] text-[22px] font-bold `}
 							onClick={() => {
 								setOn(link.title);
 								console.log(link.title);
 							}}
 						>
-							<a href={`#${link.id}`}>{link.title}</a>
+							<Link to={"/"}> {link.title}</Link>
 						</li>
 					))}
 				</ul>

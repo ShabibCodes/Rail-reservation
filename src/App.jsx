@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/Main";
 import Navigation from "./components/Navigation";
 import Seats from "./components/Seats";
@@ -11,15 +11,10 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div className="relative z-0 bg-main-pattern bg-cover bg-center bg-fixed">
-				<div>
-					<Navigation />
-				</div>
-				<div></div>
-				<div>
-					<Seats />
-				</div>
-			</div>
+			<Routes>
+				<Route path="/" element={<Main />} />
+				<Route path="/seats" element={<Seats />} />
+			</Routes>
 		</BrowserRouter>
 	);
 };

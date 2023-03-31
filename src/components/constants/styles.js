@@ -17,7 +17,8 @@ const styles = {
 	sectionSubText:
 		"sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 	navBarElement:
-		"bg-gradient-to-r from-purple-800 to-pink-500 hover:from-pink-500 hover:to-blue-200",
+		"bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-pink-500 hover:to-blue-200 border-white-10",
+	inputTheme: "bg-[#f0a630] hover:bg-[#fdae2f] focus:outline-none",
 };
 
 export { styles };

@@ -12,3 +12,11 @@ export const navLinks = [
 		title: "Contact",
 	},
 ];
+
+export const cityOptions = [
+	{ value: "Riyadh", label: "Riyadh" },
+	{ value: "Jeddah", label: "Jeddah" },
+	{ value: " Makkah", label: " Makkah" },
+	{ value: " Abha ", label: " Abha" },
+	{ value: " Alkharj", label: " Alkharj" },
+];
