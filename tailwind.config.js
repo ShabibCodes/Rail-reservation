@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				"main-pattern": "url('/src/assets/peak_background.png')",
+				"train-pattern": "url('/src/assets/train.jpeg')",
 			},
 		},
 	},

@@ -24,6 +24,7 @@ const Main = () => {
 		register,
 		handleSubmit,
 		formState: { errors },
+		watch,
 	} = useForm();
 
 	const handleDate = () => {
@@ -40,14 +41,14 @@ const Main = () => {
 			<section className=" w-full h-screen py-20  bg-main-pattern bg-cover bg-center bg-fixed">
 				{/* Card */}
 				<div
-					className={`absolute inset-0 top-[100px] max-w-[70%] h-[30em]
+					className={` absolute inset-0 top-[100px] max-w-[70%] h-[30em]
                 flex flex-col gap-7 mt-7 items-center mx-auto bg-gray-100 border-5 shadow-lg`}
 				>
 					<div className="w-fit px-10 mt-4 mb-7 ">
 						<p className=" h-10 text-[34px] font-bold">Buy your ticket </p>
 					</div>
-					{/* FROM TO */}
-					<div className="w-[80%] flex flex-row justify-between items-center">
+					{/* FROM TO ROW */}
+					<div className="w-[80%] flex flex-row justify-around items-center">
 						{/* FROM */}
 
 						<Select
@@ -143,8 +144,7 @@ const Main = () => {
 								</p>
 							</div>
 						</div>
-
-						<button type="submit">
+						<button type="submit" className="w-full my-7 shadow-danger-500">
 							<Link
 								to={"/seats"}
 								className={`${styles.navBarElement} hover:bg-red-700  text-[22px] font-bold text-white predict-button flex justify-center items-center
