@@ -12,7 +12,7 @@ const Navigation = () => {
 
 	return (
 		<nav
-			className={`${styles.paddingX} w-full flex items-center py-5 absolute top-0 z-100 bg-[#fca311]`}
+			className={`${styles.paddingX} w-full flex items-center py-5 absolute top-0 z-100 bg-[#fca311] bg-opacity-50`}
 		>
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 				<div>
@@ -27,7 +27,7 @@ const Navigation = () => {
 					{navLinks.map((link, i) => (
 						<li
 							key={link.id}
-							className={`hover:text-[#c6c6c6] text-[#888888] text-[22px] font-bold `}
+							className={`text-[#000000] text-[#888888] text-[22px] font-bold `}
 							onClick={() => {
 								setOn(link.title);
 								console.log(link.title);

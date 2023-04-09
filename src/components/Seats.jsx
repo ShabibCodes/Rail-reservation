@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { seats } from "./constants/seats";
 import { MdEventSeat } from "react-icons/md";
 import Navigation from "./Navigation";
+import { styles } from "./constants/styles";
 
 const Seats = () => {
 	const [passengers, setPassengers] = useState([]);
 	const [seat, setSeat] = useState([]);
 	const handleSeats = (event) => {
 		const new_seat = event.target.value;
+		console.log("XX", seats[new_seat].id);
 		setSeat([new_seat, ...seat]); // spreading & adding new seat
 		console.log("XX", seat);
 	};
@@ -39,8 +41,11 @@ const Seats = () => {
 							</p>
 						</div>
 
-						<p className="">
-							<button>submit</button>
+						<p
+							className={`${styles.navBarElement} hover:bg-red-700  text-[22px] font-bold text-white predict-button flex justify-center items-center
+                             rounded-lg  h-12 min-w-[240px]`}
+						>
+							<button>Confirm seats</button>
 						</p>
 					</div>
 
@@ -58,12 +63,12 @@ const Seats = () => {
 								<button
 									key={index}
 									value={seat.id}
-									onClick={handleSeats}
+									onClick={seat.status ? handleSeats : ""}
 									type="radio"
 									className={`${
 										seat.status
 											? "btnHover bg-gradient-to-r from-yellow-500 to-amber-500 "
-											: "bg-slate-300 "
+											: "bg-slate-300 cursor-default"
 									}  w-13 h-15 p-4 rounded-lg
                                  shadow `}
 								>
